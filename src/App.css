@@ -1,38 +1,127 @@
 .App {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.hero1 {
+  margin-top: 32px;
+  background-color: #16347b;
   color: white;
+  height: 380px;
+  padding-top: 98px;
+  padding-left: 66px;
 }
 
-.App-link {
-  color: #61dafb;
+.hero2 {
+  margin-top: 32px;
+  color: white;
+  height: 380px;
+  padding-top: 98px;
+  padding-left: 66px;
+  background-image: url(/images/unsubscribe-from-paper-bg.svg);
+  background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero2 ul {
+  list-style: none;
+  padding-left: 2em;
+}
+
+.hero2 ul li:before {
+  content: '✓';
+}
+
+.hero2 li {
+  padding-top: 6px;
+
+}
+
+/*.hero1-text {
+  width: 323px;
+}*/
+
+.Clinical-Trials {
+  width: 227px;
+  height: 39px;
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.11;
+  letter-spacing: -1px;
+  color: #304851;
+}
+
+.Rectangle-Copy-12 {
+  width: 176px;
+  height: 59px;
+  border-radius: 29.5px;
+  background-color: #ff7930;
+  font-weight: bold;
+}
+
+.Connect-people-with {
+  width: 323px;
+  height: 20px;
+  font-family: CircularStd, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.49px;
+  color: #617792;
+}
+
+
+.Find-the-best-clinic {
+  width: 323px;
+  height: 76px;
+  font-family: CircularStd, sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.03;
+  letter-spacing: -1.48px;
+  color: #ffffff;
+}
+
+.Dont-miss-out-Be-t {
+  width: 519px;
+  height: 80px;
+  font-family: CircularStd , sans-serif;
+  font-size: 33px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: -1.81px;
+  color: #ffffff;
+}
+
+.These-slots-fill-up {
+  width: 333px;
+  height: 66px;
+  font-family: CircularStd, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: 0.09px;
+  color: #ffffff;
+}
+
+.Rectangle {
+  width: 158px;
+  height: 59px;
+  border-radius: 29.5px;
+  background-color: #ffffff;
+  color: #FF8745;
 }
