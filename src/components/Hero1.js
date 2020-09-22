@@ -9,7 +9,7 @@ const Hero1 = () => {
 		        <h1 className="Find-the-best-clinic">Find the best clinical trials near you</h1>
 		        <p>Connect people with compensated clinical trials</p>
 		        <p className="lead">
-		          <Button className="Rectangle-Copy-12">Get Started now</Button>
+		          <Button className="get-started-botton">Get Started now</Button>
 		        </p>
 		    </div>
       	</Jumbotron>
