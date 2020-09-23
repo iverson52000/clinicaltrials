@@ -41,9 +41,19 @@
 }
 
 .enroll {
-  background-color: rgba(255, 255, 255, 0.7)
+  background-color: rgba(255, 255, 255, 0.7);
+}
 
-;
+.btn:hover {
+    color: #fff;
+    background-color: #ff7935;
+    border-color: #285e8e; /*set the color you want here*/
+    border-color: transparent;
+}
+
+.new-study-card {
+  border-left-color: #60c484;
+  border-left-width: 5px;
 }
 
 /*.card {
@@ -142,6 +152,7 @@
   height: 59px;
   border-radius: 29.5px;
   background-color: #ffffff;
+  border-color: transparent;
   color: #FF8745;
   font-weight: bold;
 }
@@ -151,4 +162,44 @@
   height: 38px;
   border-radius: 19px;
   background-color: #60c484;
+}
+
+.recruiting-status {
+  width: 71px;
+  height: 22px;
+  font-family: HelveticaNeue;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.47;
+  letter-spacing: -0.35px;
+  color: #77cb8c;
+}
+
+.estimated-compensation-1 {
+  width: 52px;
+  height: 26px;
+  font-family: CircularStd, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: -0.36px;
+  color: #60c484;
+}
+
+.average-user-receive {
+  width: 156px;
+  height: 22px;
+  font-family: CircularStd, sans-serif;
+  font-size: 22px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.83;
+  letter-spacing: -0.28px;
+  color: #88909d;
 }

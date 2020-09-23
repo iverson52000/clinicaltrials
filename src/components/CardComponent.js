@@ -1,21 +1,19 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
-} from 'reactstrap';
+import { Row, Col } from 'reactstrap';
+import { Card, CardBody,Button } from 'reactstrap';
 
 const CardComponent = () => {
 	return(
-		  <Card className="mt-2">
+		  <Card className="mt-2 new-study-card">
 		    <CardBody>
 				 <Row>
 				    <Col className="my-auto">Blood Drive</Col>
-				    <Col className="my-auto">Recruiting</Col>
+				    <Col className="my-auto recruiting-status">Recruiting</Col>
 				    <Col className="my-auto">May 05, 7:23PM PST</Col>
+
 				    <Col>
-				    	<span>$500</span><br/>
-				    	<span>average user receives $509.33</span>
+				    	<span className="estimated-compensation-1">$500</span><br/>
+				    	<span className="average-user-receive">average user receives $509.33</span>
 				    </Col>
 				    <Col className="my-auto">
 				    	<Button className="view-study">View Study</Button>
