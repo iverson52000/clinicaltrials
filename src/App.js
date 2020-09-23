@@ -9,12 +9,13 @@ import Hero1 from './components/Hero1';
 import Hero2 from './components/Hero2';
 import CardList from './components/CardList';
 import EnrollBanner from './components/EnrollBanner';
+import StudyPage from './components/StudyPage';
 
 const initialState = {
   input: "",
   imageUrl: "",
   box: {},
-  route: "signin",
+  route: "StudyPage",
   isProfileOpen: false,
   isSignedIn: false,
   user: {
@@ -57,36 +58,40 @@ class App extends Component {
     } = this.state;
 
     return (
-      <div className = 'container'>
-        <Header />
-        {isProfileOpen && (
-          <Modal>
-            <Filter
-              isProfileOpen={isProfileOpen}
-              toggleModal={this.toggleModal}
-              user={user}
-              loadUser={this.loadUser}
-            />
-          </Modal>
-        )}
-        <Hero1 toggleModal={this.toggleModal}/>
-        <Hero2 />
-        <h3>New Studies In Your Area</h3>
-        <CardList/>
-        <EnrollBanner/>
-        <hr style={{height:"26px", borderWidth: "3px"}}/>
-        <h3 className="mb-3">Studies You’ve Contacted</h3>
-        <CardList/>
-        <hr style={{height:"26px", borderWidth: "3px"}} className="mt-5"/>
-        <div className="mb-5">
-          <h3 className="mb-3">Studies You’ve Bookmarked</h3>
-          <CardList/>
-        </div>
+      <div>
+        { route === "home" ? (
+            <div className = 'container'>
+              <Header />
+              {isProfileOpen && (
+                <Modal>
+                  <Filter
+                    isProfileOpen={isProfileOpen}
+                    toggleModal={this.toggleModal}
+                    user={user}
+                    loadUser={this.loadUser}
+                  />
+                </Modal>
+              )}
+              <Hero1 toggleModal={this.toggleModal}/>
+              <Hero2 />
+              <h3>New Studies In Your Area</h3>
+              <CardList/>
+              <EnrollBanner/>
+              <hr style={{height:"26px", borderWidth: "3px"}}/>
+              <h3 className="mb-3">Studies You’ve Contacted</h3>
+              <CardList/>
+              <hr style={{height:"26px", borderWidth: "3px"}} className="mt-5"/>
+              <div className="mb-5">
+                <h3 className="mb-3">Studies You’ve Bookmarked</h3>
+                <CardList/>
+              </div>
+            </div> ) : (
+              <StudyPage/>
+          )
+        }
       </div>
-
     );
   }
-
 }
 
 export default App;
