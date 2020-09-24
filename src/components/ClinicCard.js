@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { Card, CardBody,Button } from 'reactstrap';
 
-const ClinicCard = () => {
+const ClinicCard = ({ onViewStudy }) => {
 	return(
 		  <Card className="mt-2 new-study-card">
 		    <CardBody>
@@ -16,7 +16,7 @@ const ClinicCard = () => {
 				    	<span className="average-user-receive">average user receives $509.33</span>
 				    </Col>
 				    <Col className="my-auto">
-				    	<Button className="view-study">View Study</Button>
+				    	<Button className="view-study" onClick={onViewStudy}>View Study</Button>
 				    	<Button className="rounded-circle ml-2">T</Button>
 				    </Col>
 				 </Row>

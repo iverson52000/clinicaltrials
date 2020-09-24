@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import ClinicCard from './ClinicCard';
 
 
-const ClinicCardList = ({onViewStudy}) => {
+const ClinicCardList = ({ onViewStudy }) => {
 	return(
 		<Container className="px-0">
 			 <Row>

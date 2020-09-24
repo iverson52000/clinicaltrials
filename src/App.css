@@ -7,14 +7,15 @@
 }
 
 .hero1 {
-  margin-top: 32px;
+  margin-top: 0px;
   background-color: #16347b;
   color: white;
   height: 380px;
   padding-top: 98px;
   padding-left: 66px;
 }
-
+/*
+@media only screen and (min-width: 900px)
 .hero1 {
   margin-top: 32px;
   background-color: #16347b;
@@ -23,8 +24,8 @@
   padding-top: 98px;
   padding-left: 66px;
 }
+*/
 
-/*@media only screen and (min-width: 900px)*/
 .hero2 {
 /*  margin-top: 32px;*/
 /*  font-size: px;*/
@@ -36,7 +37,7 @@
 /*  min-height: 600px;*/
 }
 
-@media only screen and (min-width: 500px)
+@media (min-width: 500px)
 .hero2 {
   margin-top: 32px;
   color: white;
