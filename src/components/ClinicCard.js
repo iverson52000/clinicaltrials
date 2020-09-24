@@ -8,10 +8,10 @@ const ClinicCard = ({ onViewStudy }) => {
 		    <CardBody>
 				 <Row>
 				    <Col className="my-auto">Blood Drive</Col>
-				    <Col className="my-auto recruiting-status">Recruiting</Col>
+				    <Col className="recruiting-status my-auto">Recruiting</Col>
 				    <Col className="my-auto">May 05, 7:23PM PST</Col>
 
-				    <Col>
+				    <Col className="my-auto">
 				    	<span className="estimated-compensation-1">$500</span><br/>
 				    	<span className="average-user-receive">average user receives $509.33</span>
 				    </Col>
