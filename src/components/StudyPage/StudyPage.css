@@ -39,6 +39,21 @@
 	letter-spacing: -0.1px;
 }
 
+.study-page-button:hover {
+	width: 382px;
+	height: 56px;
+	border-radius: 9px;
+	border-width: 0px;
+	background-color: #60c4bf;
+	font-family: HelveticaNeue;
+	font-size: 20px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: -0.1px;
+}
+
 .study-page-title-2 {
 	width: 557px;
 	height: 36px;
@@ -101,3 +116,12 @@
 	letter-spacing: -0.47px;
 	color: #1f87ab;
 }
+
+.btn-link:hover {
+/*    color: #fff;*/
+    background-color: transparent;
+    border-color: transparent; /*set the color you want here*/
+    color: blue;
+}
+
+

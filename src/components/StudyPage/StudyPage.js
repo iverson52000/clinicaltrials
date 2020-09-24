@@ -3,10 +3,11 @@ import { Row, Col, Container} from 'reactstrap';
 import { Card,Button, CardTitle, CardText } from 'reactstrap';
 import './StudyPage.css';
 
-const StudyPage = () => {
+
+const StudyPage = ({ onRouteChange }) => {
 	return(
 		<Container className="mt-3">
-			<p>Back to studies</p>
+			<Button color="link" onClick={onRouteChange} className="pl-0">Back to studies</Button>
 			<Row>
 				<Col md="7">
 					<p>Observational</p>

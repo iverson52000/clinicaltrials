@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-
 }
 
 .header {
@@ -16,19 +15,42 @@
   padding-left: 66px;
 }
 
-.hero2 {
+.hero1 {
   margin-top: 32px;
+  background-color: #16347b;
   color: white;
   height: 380px;
   padding-top: 98px;
   padding-left: 66px;
+}
+
+/*@media only screen and (min-width: 900px)*/
+.hero2 {
+/*  margin-top: 32px;*/
+/*  font-size: px;*/
+  color: white;
+  padding-top: 98px;
+  padding-left: 31px;
   background-image: url(/images/unsubscribe-from-paper-bg.svg);
   background-size: cover;
+/*  min-height: 600px;*/
+}
+
+@media only screen and (min-width: 500px)
+.hero2 {
+  margin-top: 32px;
+  color: white;
+  padding-top: 98px;
+  padding-left: 31px;
+  background-image: url(/images/unsubscribe-from-paper-bg.svg);
+  background-size: cover;
+  font-size: 16px;
 }
 
 .hero2 ul {
   list-style: none;
   padding-left: 2em;
+  padding-right: 0px;
 }
 
 .hero2 ul li:before {
@@ -45,10 +67,10 @@
 }
 
 .btn:hover {
-    color: #fff;
-    background-color: #ff7935;
-    border-color: #285e8e; /*set the color you want here*/
-    border-color: transparent;
+/*    color: #fff;*/
+    background-color: white;
+    border-color: black; /*set the color you want here*/
+    color: black;
 }
 
 .new-study-card {
@@ -56,15 +78,6 @@
   border-left-width: 5px;
 }
 
-/*.card {
-  width: 1110px;
-  mx: auto;
-}*/
-
-
-/*.hero1-text {
-  width: 323px;
-}*/
 
 .Clinical-Trials {
   width: 227px;
@@ -109,8 +122,8 @@
 
 
 .Find-the-best-clinic {
-  width: 323px;
-  height: 76px;
+/*  width: 323px;
+  height: 76px;*/
   font-family: CircularStd, sans-serif;
   font-size: 34px;
   font-weight: bold;
@@ -122,8 +135,8 @@
 }
 
 .Dont-miss-out-Be-t {
-  width: 519px;
-  height: 80px;
+/*  width: 519px;
+  height: 80px;*/
   font-family: CircularStd , sans-serif;
   font-size: 33px;
   font-weight: bold;
@@ -135,8 +148,8 @@
 }
 
 .These-slots-fill-up {
-  width: 333px;
-  height: 66px;
+/*  width: 333px;
+  height: 66px;*/
   font-family: CircularStd, sans-serif;
   font-size: 16px;
   font-weight: normal;

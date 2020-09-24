@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import CardComponent from './CardComponent';
+import ClinicCard from './ClinicCard';
 
 
-const CardList = () => {
+const ClinicCardList = ({onViewStudy}) => {
 	return(
 		<Container className="px-0">
 			 <Row>
@@ -13,10 +13,10 @@ const CardList = () => {
 		        <Col>Estimated Compensation</Col>
 		        <Col></Col>
 		     </Row>
-		     <CardComponent/>
-		     <CardComponent/>
+		     <ClinicCard onViewStudy={onViewStudy}/>
+		     <ClinicCard onViewStudy={onViewStudy}/>
 		</Container>
 	);
 }
 
-export default CardList;
+export default ClinicCardList;

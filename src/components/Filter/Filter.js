@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, 
-	FormText, Container, CustomInput} from 'reactstrap';
+	Container, CustomInput} from 'reactstrap';
 
 import './Filter.css';
 
@@ -8,49 +8,28 @@ class Filter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: this.props.user.name,
-      age: this.props.user.age,
-      pet: this.props.user.pet
     }
   }
 
-  // onProfileUpdate = (data) => {
-  //   fetch(`http://localhost:3001/profile/${this.props.user.id}`, {
-  //     method: 'post',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       'Authorization': window.sessionStorage.getItem('token')
-  //     },
-  //     body: JSON.stringify({
-  //       formInput: data
-  //     })
-  //   }).then((resp) => {
-  //     if (resp.status === 200 || resp.status === 304) {
-  //       this.props.toggleModal();
-  //       this.props.loadUser({ ...this.props.user, ...data });
-  //     }
-  //   }).catch(console.log);
-  // }
-
   onFormChange = (event) => {
-    switch(event.target.name) {
-      case 'user-name':
-        this.setState({name: event.target.value})
-        break;
-      case 'user-age':
-        this.setState({age: event.target.value})
-        break;
-      case 'user-pet':
-        this.setState({pet: event.target.value})
-        break;
-      default:
-        return;
-    }
+    // switch(event.target.name) {
+    //   case 'user-name':
+    //     this.setState({name: event.target.value})
+    //     break;
+    //   case 'user-age':
+    //     this.setState({age: event.target.value})
+    //     break;
+    //   case 'user-pet':
+    //     this.setState({pet: event.target.value})
+    //     break;
+    //   default:
+    //     return;
+    // }
   }
 
   render() {
-    const { toggleModal, user } = this.props;
-    const { name, age, pet } = this.state;
+    const { toggleModal} = this.props;
+    // const { name, age, pet } = this.state;
     return (
       <div className='filter-modal '>
 		<Container className='modal-container px-5 pb-5'>
@@ -89,7 +68,7 @@ class Filter extends Component {
 			        <FormGroup check>
 			          <Label check>
 			            <Input type="radio" name="radio1" />{' '}
-						No
+						      No
 			          </Label>
 			        </FormGroup>
 			    </FormGroup>

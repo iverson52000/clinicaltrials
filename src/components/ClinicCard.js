@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { Card, CardBody,Button } from 'reactstrap';
 
-const CardComponent = () => {
+const ClinicCard = () => {
 	return(
 		  <Card className="mt-2 new-study-card">
 		    <CardBody>
@@ -25,4 +25,4 @@ const CardComponent = () => {
 	);
 }
 
-export default CardComponent;
+export default ClinicCard;

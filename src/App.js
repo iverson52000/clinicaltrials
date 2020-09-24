@@ -7,21 +7,17 @@ import Filter from "./components/Filter/Filter";
 import Header from './components/Header';
 import Hero1 from './components/Hero1';
 import Hero2 from './components/Hero2';
-import CardList from './components/CardList';
+import CardList from './components/ClinicCardList';
 import EnrollBanner from './components/EnrollBanner';
 import StudyPage from './components/StudyPage/StudyPage';
 
 const initialState = {
-  route: "StudyPage",
+  route: "home",
   isFilterOpen: false,
   user: {
     id: "",
     name: "",
     email: "",
-    entries: 0,
-    joined: "",
-    age: 0,
-    pet: "",
   },
 };
 
@@ -35,6 +31,22 @@ class App extends Component {
 
   }
 
+  onRouteChange = (route) => {
+    if (route === "home") {
+      this.setState({ route: "studypage" });
+    }
+    this.setState({ route: "home" });
+  };
+
+  onViewStudy= (route) => {
+    // if (route === "home") {
+    //   this.setState({ route: "studypage" });
+    // }
+    this.setState({ route: "studypage" });
+  };
+
+
+
   toggleModal = () => {
     this.setState((prevState) => ({
       ...prevState,
@@ -45,10 +57,7 @@ class App extends Component {
 
   render(){
     const {
-      isSignedIn,
-      imageUrl,
       route,
-      box,
       isFilterOpen,
       user,
     } = this.state;
@@ -71,18 +80,18 @@ class App extends Component {
               <Hero1 toggleModal={this.toggleModal}/>
               <Hero2 />
               <h3>New Studies In Your Area</h3>
-              <CardList/>
+              <CardList onViewStudy={this.onViewStudy}/>
               <EnrollBanner/>
               <hr style={{height:"26px", borderWidth: "3px"}}/>
               <h3 className="mb-3">Studies You’ve Contacted</h3>
-              <CardList/>
+              <CardList onViewStudy={this.onViewStudy}/>
               <hr style={{height:"26px", borderWidth: "3px"}} className="mt-5"/>
               <div className="mb-5">
                 <h3 className="mb-3">Studies You’ve Bookmarked</h3>
-                <CardList/>
+                <CardList onViewStudy={this.onViewStudy}/>
               </div>
             </div> ) : (
-              <StudyPage/>
+              <StudyPage onRouteChange={this.onRouteChange}/>
           )
         }
       </div>

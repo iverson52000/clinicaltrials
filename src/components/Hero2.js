@@ -8,7 +8,7 @@ const Hero2 = () => {
 	  	<Jumbotron className="hero2">
 		  	<Container>
 	  	      <Row>
-		        <Col md="7">
+		        <Col md="8">
 		        	<h1 className="Dont-miss-out-Be-t">Don’t miss out. Be the first to know.</h1>
 			        <p className="These-slots-fill-up">These slots fill up fast. Get text notifications as soon as a new study opens near you by upgrading to a premium subscription.</p>
 			        <p className="lead">
