@@ -9,15 +9,11 @@ import Hero1 from './components/Hero1';
 import Hero2 from './components/Hero2';
 import CardList from './components/CardList';
 import EnrollBanner from './components/EnrollBanner';
-import StudyPage from './components/StudyPage';
+import StudyPage from './components/StudyPage/StudyPage';
 
 const initialState = {
-  input: "",
-  imageUrl: "",
-  box: {},
   route: "StudyPage",
-  isProfileOpen: false,
-  isSignedIn: false,
+  isFilterOpen: false,
   user: {
     id: "",
     name: "",
@@ -42,7 +38,7 @@ class App extends Component {
   toggleModal = () => {
     this.setState((prevState) => ({
       ...prevState,
-      isProfileOpen: !prevState.isProfileOpen,
+      isFilterOpen: !prevState.isFilterOpen,
     }));
   };
 
@@ -53,7 +49,7 @@ class App extends Component {
       imageUrl,
       route,
       box,
-      isProfileOpen,
+      isFilterOpen,
       user,
     } = this.state;
 
@@ -62,10 +58,10 @@ class App extends Component {
         { route === "home" ? (
             <div className = 'container'>
               <Header />
-              {isProfileOpen && (
+              {isFilterOpen && (
                 <Modal>
                   <Filter
-                    isProfileOpen={isProfileOpen}
+                    isFilterOpen={isFilterOpen}
                     toggleModal={this.toggleModal}
                     user={user}
                     loadUser={this.loadUser}
