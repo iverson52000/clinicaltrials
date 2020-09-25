@@ -8,11 +8,15 @@
 
 .hero1 {
   margin-top: 42px;
-  background-color: #16347b;
+/*  background-color: #16347b;*/
   color: white;
-  height: 380px;
+/*  height: 380px;*/
   padding-top: 98px;
   padding-left: 66px;
+  background-image: url(/images/banner.svg);
+  background-size: cover;
+  background-position: center;
+
 }
 
 .trash {
@@ -31,18 +35,8 @@
 }
 */
 
-.hero2 {
-/*  margin-top: 32px;*/
-/*  font-size: px;*/
-  color: white;
-  padding-top: 98px;
-  padding-left: 31px;
-  background-image: url(/images/unsubscribe-from-paper-bg.svg);
-  background-size: cover;
-/*  min-height: 600px;*/
-}
 
-@media (min-width: 500px)
+/*@media (min-width: 500px)*/
 .hero2 {
   margin-top: 32px;
   color: white;
@@ -50,6 +44,7 @@
   padding-left: 31px;
   background-image: url(/images/unsubscribe-from-paper-bg.svg);
   background-size: cover;
+
   font-size: 16px;
 }
 
@@ -69,7 +64,19 @@
 }
 
 .enroll {
-  background-color: rgba(255, 255, 255, 0.7);
+/*  width: 1073px;*/
+/*  max-height: 191px;*/
+  background-color: transparent;
+  background-image: url(/images/Group_33.svg);
+  background-repeat:no-repeat;
+  background-size: 100%;
+/*  background-size: 110% 135%;*/
+/*  background-size: 1500px 200px;*/
+  background-position: center;
+  border-radius: 6px;
+/*  box-shadow: 0 4px 6px 0 rgba(234, 240, 247, 0.8), 0 1px 3px 0 rgba(0, 0, 0, 0.05);*/
+/*  background-color: rgba(255, 255, 255, 0.7);*/
+
 }
 
 .btn:hover {

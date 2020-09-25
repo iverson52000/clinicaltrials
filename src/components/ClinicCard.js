@@ -4,40 +4,40 @@ import { Card, CardBody,Button } from 'reactstrap';
 
 import { gql, useQuery } from '@apollo/client';
 
-const GET_CLINICAL_TRIALS = gql`
-  {
-	  me {
-	    _id
-	    userClinicalTrialQuery {
-	      age
-	    	genderBased
-	      age
-	      state
-	      zipCode
-	    }
-	    clinicalTrialsConnection {
-	      nodes {
-	        _id
-	        nctId
-	        contacted
-	        bookmarked
-	        clinicalTrialData {
-	          nctId
-	          studyName
-	        }
-	      }
-	    }
-	  }
-	}
-`;
+// const GET_CLINICAL_TRIALS = gql`
+//   {
+// 	  me {
+// 	    _id
+// 	    userClinicalTrialQuery {
+// 	      age
+// 	    	genderBased
+// 	      age
+// 	      state
+// 	      zipCode
+// 	    }
+// 	    clinicalTrialsConnection {
+// 	      nodes {
+// 	        _id
+// 	        nctId
+// 	        contacted
+// 	        bookmarked
+// 	        clinicalTrialData {
+// 	          nctId
+// 	          studyName
+// 	        }
+// 	      }
+// 	    }
+// 	  }
+// 	}
+// `;
 
 const ClinicCard = ({ onViewStudy }) => {
-	const { loading, error, data } = useQuery(GET_CLINICAL_TRIALS);
+	// const { loading, error, data } = useQuery(GET_CLINICAL_TRIALS);
 	
-	if (loading) return 'Loading...';
-  	if (error) return `Error! ${error.message}`;
-  	// return {data.me.id}
-  	console.log(data.me)
+	// if (loading) return 'Loading...';
+ //  	if (error) return `Error! ${error.message}`;
+ //  	// return {data.me.id}
+ //  	console.log(data.me)
 
 	return(
 		  <Card className="mt-2 new-study-card">

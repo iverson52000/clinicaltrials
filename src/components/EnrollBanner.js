@@ -11,7 +11,8 @@ const EnrollBanner = () => {
 				<Row>
 				 	<Col sm="12" md="2"></Col>
 			        <Col sm="12" md="3">
-			        	Enroll in a Study Today How it works<br/>
+			        	<strong>Enroll in a Study Today</strong>
+			        	<br/> How it works<br/>
 			        	<Button className="enroll-button mt-3">Get Started</Button>
 			        </Col>
 			        <Col sm="12" md="2">Enter preferences and we will find the best studies near you</Col>
