@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider } from '@apollo/client';
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloClient, gql } from 'apollo-boost';
@@ -64,11 +64,12 @@ client.query({
 
 
 ReactDOM.render(
-	<ApolloProvider client = {client}>
-	  <React.StrictMode>
+	<React.StrictMode>
+	  <ApolloProvider client = {client}>
 	    <App />
-	  </React.StrictMode>
-	</ApolloProvider>,
+	  </ApolloProvider>
+	</React.StrictMode>,
+
 	document.getElementById('root')
 
 );
