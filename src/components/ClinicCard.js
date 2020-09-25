@@ -17,7 +17,7 @@ const ClinicCard = ({ onViewStudy }) => {
 				    </Col>
 				    <Col className="my-auto">
 				    	<Button className="view-study" onClick={onViewStudy}>View Study</Button>
-				    	<Button className="rounded-circle ml-2">T</Button>
+				    	<Button className="rounded-circle ml-2 trash" ><img src={"./images/trash.svg"} alt="Logo" /></Button>
 				    </Col>
 				 </Row>
 		    </CardBody>

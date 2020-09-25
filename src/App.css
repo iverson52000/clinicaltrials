@@ -14,6 +14,11 @@
   padding-top: 98px;
   padding-left: 66px;
 }
+
+.trash {
+  background-color: #e1e8ef;
+  border-color: transparent;
+}
 /*
 @media only screen and (min-width: 900px)
 .hero1 {
@@ -79,7 +84,18 @@
   border-left-width: 5px;
 
 }
-
+.study-title {
+/*  width: 289px;
+  height: 36px;*/
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.69px;
+  color: #304851;
+}
 
 .Clinical-Trials {
   width: 227px;
@@ -107,6 +123,7 @@
   height: 44px;
   border-radius: 23px;
   background-color: #60c4bf;
+  border-color: transparent;
 }
 
 .Connect-people-with {
@@ -178,6 +195,7 @@
   height: 38px;
   border-radius: 19px;
   background-color: #60c484;
+  border-color: transparent;
 }
 
 .recruiting-status {

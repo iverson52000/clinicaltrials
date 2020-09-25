@@ -78,15 +78,15 @@ class App extends Component {
               )}
               <Hero1 toggleModal={this.toggleModal}/>
               <Hero2 />
-              <h3>New Studies In Your Area</h3>
+              <h3 className="study-title">New Studies In Your Area</h3>
               <ClinicCardList onViewStudy={this.onViewStudy}/>
               <EnrollBanner/>
               <hr style={{height:"26px", borderWidth: "3px"}}/>
-              <h3 className="mb-3">Studies You’ve Contacted</h3>
+              <h3 className="mb-3 study-title">Studies You’ve Contacted</h3>
               <ClinicCardList onViewStudy={this.onViewStudy}/>
               <hr style={{height:"26px", borderWidth: "3px"}} className="mt-5"/>
               <div className="mb-5">
-                <h3 className="mb-3">Studies You’ve Bookmarked</h3>
+                <h3 className="mb-3 study-title">Studies You’ve Bookmarked</h3>
                 <ClinicCardList onViewStudy={this.onViewStudy}/>
               </div>
             </div> ) : (
