@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1073" height="370" viewBox="0 0 1073 370">
+    <defs>
+        <linearGradient id="c7nfx996tb" x1="68.498%" x2="33.297%" y1="13.659%" y2="88.38%">
+            <stop offset="0%" stop-color="#FF7930"/>
+            <stop offset="31.646%" stop-color="#FF9D68"/>
+            <stop offset="73.865%" stop-color="#FF9D68"/>
+            <stop offset="100%" stop-color="#FF7930"/>
+        </linearGradient>
+        <rect id="w4pc9p9qxa" width="1073" height="370" x="0" y="0" rx="8"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g transform="translate(-334 -642) translate(334 642)">
+                        <mask id="emz4nzo3ec" fill="#fff">
+                            <use xlink:href="#w4pc9p9qxa"/>
+                        </mask>
+                        <use fill="#FF7930" xlink:href="#w4pc9p9qxa"/>
+                        <path stroke="url(#c7nfx996tb)" stroke-width="130" d="M287 436.346l5.423-19.313c26.01-92.628 108.239-158.32 204.324-163.236C581.2 249.477 646.16 177.513 641.84 93.06c-.13-2.56-.326-5.116-.585-7.667L625.862-66h0" mask="url(#emz4nzo3ec)" opacity=".601" transform="rotate(4 472.271 185.173)"/>
+                        <g mask="url(#emz4nzo3ec)" opacity=".629">
+                            <g>
+                                <path fill="#FF8F52" d="M289.75 286.723H0C0 134.18 123.66 10.52 276.203 10.52c3.44 0 6.88.064 10.32.193l3.227.12v275.89z" transform="translate(784.127 83.32)"/>
+                                <path fill="#FF7930" d="M289.975 288.663H143.461c0-80.072 64.911-144.983 144.983-144.983h1.531v144.983z" transform="translate(784.127 83.32)"/>
+                            </g>
+                        </g>
+                        <g mask="url(#emz4nzo3ec)">
+                            <g>
+                                <path fill="#FF8F52" d="M289.75 286.723H0C0 134.18 123.66 10.52 276.203 10.52c3.44 0 6.88.064 10.32.193l3.227.12v275.89z" transform="rotate(-180 145.221 143.299)"/>
+                                <path fill="#FF7930" d="M289.975 288.663H143.461c0-80.072 64.911-144.983 144.983-144.983h1.531v144.983z" transform="rotate(-180 145.221 143.299)"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
