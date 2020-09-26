@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 import { Card, CardBody,Button } from 'reactstrap';
 
 import { gql, useQuery } from '@apollo/client';
-
+import trash from "../images/trash.svg";
 // const GET_CLINICAL_TRIALS = gql`
 //   {
 // 	  me {
@@ -54,7 +54,7 @@ const ClinicCard = ({ onViewStudy }) => {
 				    </Col>
 				    <Col className="my-auto">
 				    	<Button className="view-study" onClick={onViewStudy}>View Study</Button>
-				    	<Button className="rounded-circle ml-2 trash" ><img src={"./images/trash.svg"} alt="Logo" /></Button>
+				    	<Button className="rounded-circle ml-2 trash" ><img src={trash} alt="Logo" /></Button>
 				    </Col>
 				 </Row>
 		    </CardBody>

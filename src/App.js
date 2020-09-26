@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import './styles/App.css';
 
 import Modal from "./components/Modal/Modal";
 import Filter from "./components/Filter/Filter";
