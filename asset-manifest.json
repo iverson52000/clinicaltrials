@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/clinicaltrials/static/css/main.37f801e1.chunk.css",
-    "main.js": "/clinicaltrials/static/js/main.62ed8053.chunk.js",
-    "main.js.map": "/clinicaltrials/static/js/main.62ed8053.chunk.js.map",
+    "main.css": "/clinicaltrials/static/css/main.c517f58a.chunk.css",
+    "main.js": "/clinicaltrials/static/js/main.3f39eeb7.chunk.js",
+    "main.js.map": "/clinicaltrials/static/js/main.3f39eeb7.chunk.js.map",
     "runtime-main.js": "/clinicaltrials/static/js/runtime-main.44ffd30d.js",
     "runtime-main.js.map": "/clinicaltrials/static/js/runtime-main.44ffd30d.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/clinicaltrials/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.01ee8009.chunk.js": "/clinicaltrials/static/js/2.01ee8009.chunk.js",
-    "static/js/2.01ee8009.chunk.js.map": "/clinicaltrials/static/js/2.01ee8009.chunk.js.map",
+    "static/js/2.06622731.chunk.js": "/clinicaltrials/static/js/2.06622731.chunk.js",
+    "static/js/2.06622731.chunk.js.map": "/clinicaltrials/static/js/2.06622731.chunk.js.map",
     "index.html": "/clinicaltrials/index.html",
-    "precache-manifest.b60b6e67db4dbea337e2faa81ce818de.js": "/clinicaltrials/precache-manifest.b60b6e67db4dbea337e2faa81ce818de.js",
+    "precache-manifest.c5e08399e1aeec6deec5417033459a3e.js": "/clinicaltrials/precache-manifest.c5e08399e1aeec6deec5417033459a3e.js",
     "service-worker.js": "/clinicaltrials/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/clinicaltrials/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.37f801e1.chunk.css.map": "/clinicaltrials/static/css/main.37f801e1.chunk.css.map",
-    "static/js/2.01ee8009.chunk.js.LICENSE.txt": "/clinicaltrials/static/js/2.01ee8009.chunk.js.LICENSE.txt"
+    "static/css/main.c517f58a.chunk.css.map": "/clinicaltrials/static/css/main.c517f58a.chunk.css.map",
+    "static/js/2.06622731.chunk.js.LICENSE.txt": "/clinicaltrials/static/js/2.06622731.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/clinicaltrials/static/media/unsubscribe-from-paper-bg.4f0e3a12.svg",
+    "static/media/trash.svg": "/clinicaltrials/static/media/trash.ad6eeacf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.44ffd30d.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.01ee8009.chunk.js",
-    "static/css/main.37f801e1.chunk.css",
-    "static/js/main.62ed8053.chunk.js"
+    "static/js/2.06622731.chunk.js",
+    "static/css/main.c517f58a.chunk.css",
+    "static/js/main.3f39eeb7.chunk.js"
   ]
 }
