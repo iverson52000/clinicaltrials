@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import { ApolloProvider } from '@apollo/client';
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory';
-import { ApolloClient, gql } from 'apollo-boost';
+import { ApolloClient} from 'apollo-boost';
 import { setContext } from '@apollo/client/link/context';
 
 const httpLink = createHttpLink({
@@ -33,34 +33,34 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-client.query({
-	query: gql `
-	  	{
-		  me {
-		    _id
-		    userClinicalTrialQuery {
-		      age
-		    	genderBased
-		      age
-		      state
-		      zipCode
-		    }
-		    clinicalTrialsConnection {
-		      nodes {
-		        _id
-		        nctId
-		        contacted
-		        bookmarked
-		        clinicalTrialData {
-		          nctId
-		          studyName
-		        }
-		      }
-		    }
-		  }
-		}
-	`
-}).then((resp) => console.log(resp))
+// client.query({
+// 	query: gql `
+// 	  	{
+// 		  me {
+// 		    _id
+// 		    userClinicalTrialQuery {
+// 		      age
+// 		    	genderBased
+// 		      age
+// 		      state
+// 		      zipCode
+// 		    }
+// 		    clinicalTrialsConnection {
+// 		      nodes {
+// 		        _id
+// 		        nctId
+// 		        contacted
+// 		        bookmarked
+// 		        clinicalTrialData {
+// 		          nctId
+// 		          studyName
+// 		        }
+// 		      }
+// 		    }
+// 		  }
+// 		}
+// 	`
+// }).then((resp) => console.log(resp))
 
 
 ReactDOM.render(
