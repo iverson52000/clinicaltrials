@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { gql, useQuery } from '@apollo/client';
+
 import './styles/App.css';
 
 import Modal from "./components/Modal/Modal";
@@ -14,11 +16,14 @@ import StudyPage from './components/StudyPage/StudyPage';
 const initialState = {
   route: "home",
   isFilterOpen: false,
-  user: {
-    id: "",
-    name: "",
-    email: "",
+  filters: {
+    Placebo: false,
+    remoteOnly: false,
   },
+  studies: {
+    nctId: "",
+    studyName: "",
+  }
 };
 
 class App extends Component {
@@ -53,12 +58,63 @@ class App extends Component {
     }));
   };
 
+  handleOptionChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    // console.log(this.state.filters["noPlacebo"])
+    console.log(value)
+
+    this.setState((prevState) => ({
+      filters: {
+        ...prevState.filters,
+        [name]: value,
+      }
+    }), () => console.log(this.state.filters));
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(this.state.filters)
+    // const { plcebo, remoteOnly } = this.state.filters;
+
+    // const GET_CLINICAL_TRIALS = gql`
+    // {
+    //   getClinicalTrials(
+    //     input: {
+    //       placebo: ${plcebo}
+    //       remoteOnly: ${remoteOnly}
+    //       country: "United States"
+    //       state: "California"
+    //       healthy: false
+    //       biologicalSex: ALL
+    //       genderBased: false
+    //       studyType: INTERVENTIONAL
+    //       pregnant: NONE
+    //       substance: DRUGS
+    //       healthConditions: []
+    //     }
+    //   ) {
+    //     nctId
+    //     studyName
+    //   }
+    // }
+    // `;
+
+    // const { loading, error, data } = useQuery(GET_CLINICAL_TRIALS);
+	
+    // if (loading) return 'Loading...';
+    // if (error) return `Error! ${error.message}`;
+    //   // return {data.me.id}
+    // console.log(data.getClinicalTrials.slice(0, 5))
+
+  }
+  
 
   render(){
     const {
       route,
       isFilterOpen,
-      user,
+      filters,
     } = this.state;
 
     return (
@@ -69,10 +125,10 @@ class App extends Component {
               {isFilterOpen && (
                 <Modal>
                   <Filter
-                    isFilterOpen={isFilterOpen}
                     toggleModal={this.toggleModal}
-                    user={user}
-                    loadUser={this.loadUser}
+                    filters={this.state.filters}
+                    handleOptionChange={this.handleOptionChange}
+                    handleSubmit={this.handleSubmit}
                   />
                 </Modal>
               )}

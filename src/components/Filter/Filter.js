@@ -5,30 +5,27 @@ import { Button, Form, FormGroup, Label, Input,
 import './Filter.css';
 
 class Filter extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+	super ();
     this.state = {
     }
   }
 
   onFormChange = (event) => {
-    // switch(event.target.name) {
-    //   case 'user-name':
-    //     this.setState({name: event.target.value})
-    //     break;
-    //   case 'user-age':
-    //     this.setState({age: event.target.value})
-    //     break;
-    //   case 'user-pet':
-    //     this.setState({pet: event.target.value})
-    //     break;
-    //   default:
-    //     return;
-    // }
+    switch(event.target.name) {
+      case 'noPlacebo':
+        this.setState({name: event.target.value})
+        break;
+      case 'remoteOnly':
+        this.setState({age: event.target.value})
+        break;
+      default:
+        return;
+    }
   }
 
   render() {
-    const { toggleModal} = this.props;
+    const { toggleModal, filters, handleOptionChange, handleSubmit} = this.props;
     // const { name, age, pet } = this.state;
     return (
       <div className='filter-modal '>
@@ -61,20 +58,48 @@ class Filter extends Component {
 			        <Label>No Placebo</Label>
 			        <FormGroup check>
 			          <Label check>
-			            <Input type="radio" name="radio1" />{' '}
+						<Input type="radio" 
+							value="true"
+							name="Placebo"
+							// checked={filters.noPlacebo === "true"} 
+							onChange={handleOptionChange}/>{' '}
+			            	Yes
+			          </Label>
+			        </FormGroup>
+			        <FormGroup check>
+			          <Label check>
+					  <Input type="radio" 
+							value="false"
+							name="Placebo"
+							onChange={handleOptionChange}/>{' '}
+						    No
+			          </Label>
+			        </FormGroup>
+			    </FormGroup>
+				<FormGroup tag="fieldset">
+			        <Label>Remote only</Label>
+			        <FormGroup check>
+			          <Label check>
+						<Input type="radio" 
+								value="true"
+								name="remoteOnly"
+								onChange={handleOptionChange}/>{' '}
 			            Yes
 			          </Label>
 			        </FormGroup>
 			        <FormGroup check>
 			          <Label check>
-			            <Input type="radio" name="radio1" />{' '}
-						      No
+					  <Input type="radio" 
+								value="false"
+								name="remoteOnly"
+								onChange={handleOptionChange}/>{' '}
+						No
 			          </Label>
 			        </FormGroup>
 			    </FormGroup>
 				<div className="d-flex justify-content-center">
 					<Button onClick={toggleModal} className="btn-lg btn-danger mx-1 filter-botton">Cancel</Button>
-					<Button className="btn-lg btn-info mx-1 filter-botton">Apply</Button>
+					<Button onClick={handleSubmit} className="btn-lg btn-info mx-1 filter-botton">Apply</Button>
 				</div>		  
 			</Form>
 		</Container>

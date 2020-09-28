@@ -33,7 +33,7 @@ const ClinicCardList = ({ onViewStudy }) => {
 	if (loading) return 'Loading...';
   	if (error) return `Error! ${error.message}`;
   	// return {data.me.id}
-  	console.log(data.getClinicalTrials.slice(0, 5))
+  	// console.log(data.getClinicalTrials.slice(0, 5))
 
 
 	return(
