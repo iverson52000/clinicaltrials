@@ -7,7 +7,7 @@ import { Card, CardBody,Button } from 'reactstrap';
 import trash from "../images/trash.svg";
 
 const GET_CLINICAL_TRIAL = gql`
-	query getClinicalTrial($nctId: String) {
+	query getClinicalTrial($nctId: ID!) {
 		getClinicalTrial(nctId: $nctId) {
 			nctId
 			biologicalSex
@@ -53,7 +53,7 @@ const GET_CLINICAL_TRIAL = gql`
 const ClinicCard = ({ onViewStudy, studyName, nctId }) => {
 	// console.log(nctId)	
 	const { loading, error, data } = useQuery(GET_CLINICAL_TRIAL, {
-		variables: { nctId: "NCT04542304" },
+		variables: { nctId: nctId },
 	  });
 
 	// let { loading, error, data } = useQuery(GET_CLINICAL_TRIAL);
@@ -67,12 +67,12 @@ const ClinicCard = ({ onViewStudy, studyName, nctId }) => {
 		    <CardBody>
 				 <Row>
 				    <Col className="my-auto">{studyName}</Col>
-					{/* <Col className="recruiting-status my-auto">{data.getClinicalTrial.recruitingStatus}</Col> */}
-				    <Col className="recruiting-status my-auto">Recruiting</Col>
-					<Col className="my-auto">May 05, 7:23PM PST</Col>
+					<Col className="recruiting-status my-auto">{data.getClinicalTrial.recruitingStatus}</Col>
+				    {/* <Col className="recruiting-status my-auto">Recruiting</Col> */}
+					<Col className="my-auto">{data.getClinicalTrial.completionDate}</Col>
 
 				    <Col className="my-auto">
-				    	<span className="estimated-compensation-1">$500</span><br/>
+				    	<span className="estimated-compensation-1">{data.getClinicalTrial.estimatedCompensation}</span><br/>
 				    	<span className="average-user-receive">average user receives $509.33</span>
 				    </Col>
 				    <Col className="my-auto">
