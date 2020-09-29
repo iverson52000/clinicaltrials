@@ -6,30 +6,9 @@ import { Card, CardBody,Button } from 'reactstrap';
 
 import trash from "../images/trash.svg";
 
-// const GET_CLINICAL_TRIAL = gql`
-// 		query getClinicalTrial($nctId: String) {
-// 			getClinicalTrial(nctId: $nctId) {
-// 				nctId
-// 				biologicalSex
-// 				genderBased
-// 				startDate
-// 				completionDate
-// 				estimatedCompensation
-// 				recruitingStatus
-// 				healthyVolunteers
-// 				conditions
-// 				ageMin
-// 				ageMax
-// 				phase
-// 				locations {
-// 					name
-// 				}
-// 			}
-// 		}
-// 	`;
-
-	const GET_CLINICAL_TRIAL = gql`
-	{ getClinicalTrial(nctId: "NCT04567719") {
+const GET_CLINICAL_TRIAL = gql`
+	query getClinicalTrial($nctId: String) {
+		getClinicalTrial(nctId: $nctId) {
 			nctId
 			biologicalSex
 			genderBased
@@ -49,16 +28,35 @@ import trash from "../images/trash.svg";
 	}
 `;
 
+// 	const GET_CLINICAL_TRIAL = gql`
+// 	{ getClinicalTrial(nctId: "NCT04542304") {
+// 			nctId
+// 			biologicalSex
+// 			genderBased
+// 			startDate
+// 			completionDate
+// 			estimatedCompensation
+// 			recruitingStatus
+// 			healthyVolunteers
+// 			conditions
+// 			ageMin
+// 			ageMax
+// 			phase
+// 			locations {
+// 				name
+// 			}
+// 		}
+// 	}
+// `;
+
 
 const ClinicCard = ({ onViewStudy, studyName, nctId }) => {
 	// console.log(nctId)	
-	// let { loading, error, data } = useQuery(GET_CLINICAL_TRIAL, {
-	// 	variables: { 
-	// 		nctId: "NCT04567719", 
-	// 		}, 
-	// 	});
+	const { loading, error, data } = useQuery(GET_CLINICAL_TRIAL, {
+		variables: { nctId: "NCT04542304" },
+	  });
 
-	let { loading, error, data } = useQuery(GET_CLINICAL_TRIAL);
+	// let { loading, error, data } = useQuery(GET_CLINICAL_TRIAL);
 		
     
     if (loading) return 'Loading...';
