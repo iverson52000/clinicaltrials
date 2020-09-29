@@ -25,7 +25,7 @@ class Filter extends Component {
   }
 
   render() {
-    const { toggleModal, filters, handleOptionChange, handleSubmit} = this.props;
+    const { toggleModal, handleFilterChange, handleSubmit} = this.props;
     // const { name, age, pet } = this.state;
     return (
       <div className='filter-modal '>
@@ -60,9 +60,9 @@ class Filter extends Component {
 			          <Label check>
 						<Input type="radio" 
 							value="true"
-							name="Placebo"
+							name="placebo"
 							// checked={filters.noPlacebo === "true"} 
-							onChange={handleOptionChange}/>{' '}
+							onChange={handleFilterChange}/>{' '}
 			            	Yes
 			          </Label>
 			        </FormGroup>
@@ -70,8 +70,8 @@ class Filter extends Component {
 			          <Label check>
 					  <Input type="radio" 
 							value="false"
-							name="Placebo"
-							onChange={handleOptionChange}/>{' '}
+							name="placebo"
+							onChange={handleFilterChange}/>{' '}
 						    No
 			          </Label>
 			        </FormGroup>
@@ -83,7 +83,7 @@ class Filter extends Component {
 						<Input type="radio" 
 								value="true"
 								name="remoteOnly"
-								onChange={handleOptionChange}/>{' '}
+								onChange={handleFilterChange}/>{' '}
 			            Yes
 			          </Label>
 			        </FormGroup>
@@ -92,11 +92,21 @@ class Filter extends Component {
 					  <Input type="radio" 
 								value="false"
 								name="remoteOnly"
-								onChange={handleOptionChange}/>{' '}
+								onChange={handleFilterChange}/>{' '}
 						No
 			          </Label>
 			        </FormGroup>
 			    </FormGroup>
+				<FormGroup>
+					<Label for="country">Country</Label>
+					<Input 
+						type="text" 
+						name="country" 
+						id="country" 
+						placeholder="Country" 
+						onChange={handleFilterChange} 
+					/>
+				</FormGroup>
 				<div className="d-flex justify-content-center">
 					<Button onClick={toggleModal} className="btn-lg btn-danger mx-1 filter-botton">Cancel</Button>
 					<Button onClick={handleSubmit} className="btn-lg btn-info mx-1 filter-botton">Apply</Button>

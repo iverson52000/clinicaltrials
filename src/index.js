@@ -34,33 +34,20 @@ const client = new ApolloClient({
 });
 
 // client.query({
-// 	query: gql `
-// 	  	{
-// 		  me {
-// 		    _id
-// 		    userClinicalTrialQuery {
-// 		      age
-// 		    	genderBased
-// 		      age
-// 		      state
-// 		      zipCode
-// 		    }
-// 		    clinicalTrialsConnection {
-// 		      nodes {
-// 		        _id
-// 		        nctId
-// 		        contacted
-// 		        bookmarked
-// 		        clinicalTrialData {
-// 		          nctId
-// 		          studyName
-// 		        }
-// 		      }
-// 		    }
-// 		  }
-// 		}
-// 	`
-// }).then((resp) => console.log(resp))
+//   query: gql`
+//   {
+//     getClinicalTrials(
+//       input: {
+//         placebo: false
+//         remoteOnly: false
+//       }
+//     ) {
+//       nctId
+//       studyName
+//     }
+//   }
+//   `
+// }).then((resp) => console.log(resp.data))
 
 
 ReactDOM.render(

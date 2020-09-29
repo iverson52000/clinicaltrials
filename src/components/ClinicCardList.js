@@ -5,36 +5,35 @@ import ClinicCard from './ClinicCard';
 import { gql, useQuery } from '@apollo/client';
 
 const GET_CLINICAL_TRIALS = gql`
-{
-  getClinicalTrials(
-    input: {
-      placebo: false
-      remoteOnly: false
-      country: "United States"
-      state: "California"
-      healthy: false
-      biologicalSex: ALL
-      genderBased: false
-      studyType: INTERVENTIONAL
-      pregnant: NONE
-      substance: DRUGS
-      healthConditions: []
-    }
-  ) {
-    nctId
-    studyName
-  }
-}
+	query getClinicalTrials($placebo: Boolean, $remoteOnly: Boolean, $country: String) {
+		getClinicalTrials(
+			input: {
+			placebo: $placebo
+			remoteOnly: $remoteOnly
+			country: $country
+			}
+		) {
+			nctId
+			studyName
+		}
+	}	
 `;
 
-const ClinicCardList = ({ onViewStudy }) => {
-	const { loading, error, data } = useQuery(GET_CLINICAL_TRIALS);
-	
-	if (loading) return 'Loading...';
-  	if (error) return `Error! ${error.message}`;
-  	// return {data.me.id}
-  	// console.log(data.getClinicalTrials.slice(0, 5))
 
+const ClinicCardList = ({ onViewStudy, filters }) => {
+	let { placebo, remoteOnly, country } = filters;
+	let { loading, error, data } = useQuery(GET_CLINICAL_TRIALS, {
+		variables: { 
+			placebo: placebo, 
+			remoteOnly: remoteOnly,
+			country: country,
+			}, 
+		});
+    
+    if (loading) return 'Loading...';
+    if (error) return `Error! ${error.message}`;
+	
+	  // console.log(data.getClinicalTrials.slice(0, 5))
 
 	return(
 		<Container className="px-0">
@@ -46,7 +45,11 @@ const ClinicCardList = ({ onViewStudy }) => {
 		        <Col></Col>
 		     </Row>
 		     	{data.getClinicalTrials.slice(0, 5).map((item, i) => {
-		     		return <ClinicCard onViewStudy={onViewStudy} studyName={item.studyName} key = {i}/>})
+					 return <ClinicCard 
+					 			onViewStudy={onViewStudy} 
+								studyName={item.studyName} 
+								nctId={item.nctId}
+								key = {i}/>})
 				}
 		</Container>
 	);
